@@ -1,0 +1,18 @@
+pipelineJob('job-dsl-plugin') {
+  definition {
+    cpsScm {
+      scm {
+        git {
+          remote {
+            url('https://github.com/mangeshbangale27/jenkinsfile.git')
+          }
+          branch('main')
+        }
+      }
+      scriptPath('print_hello.jenkinsfile')
+    }
+  }
+  parameters{
+    choiceParam('VALUE', ['0','1'], 'Choose a number')
+  }
+}
