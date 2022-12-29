@@ -3,13 +3,23 @@
 
 pipeline {
     agent any
-
+    parameters{
+        choice(name: 'VALUE', choices : ['0','1'], description: 'choose a number')
+    }
     stages {
         stage('Hello') {
             steps {
                 echo 'Hello World'
          
-                 printJobName NAME : "Mangesh Bangale"
+                script{
+                    if ("${params.VALUE}" == '0') {
+                        printJobName NAME : "Mangesh Bangale"
+                    }
+                    else {
+                        echo " 1 value provided exiting script..."
+                     exit 1
+                    }
+                }
                 
             }
         }
