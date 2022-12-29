@@ -12,7 +12,4 @@ pipelineJob('job-dsl-plugin') {
       scriptPath('print_hello.jenkinsfile')
     }
   }
-  parameters{
-    choiceParam('VALUE', ['0','1'], 'Choose a number')
-  }
 }
