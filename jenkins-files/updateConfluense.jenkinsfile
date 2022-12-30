@@ -12,9 +12,6 @@ pipeline {
                         echo "invoking shared library..."
                         updateConfluensePage ENVIRONMET : "prod", STATUS: "UP", SOURCE_BRANCH : "develop", IMAGE_TAG : "abc-xyz", CRED_USERNAME : "mangeshbangale27@gmail.com", CRED_PASSWORD : "fH6mRSjvBUK0C26WdrxKE0F9"
                         echo " shared library executed..."
-                    else {
-                        echo " 1 value provided exiting script..."
-                     exit 1
                     }
                 }
                 
