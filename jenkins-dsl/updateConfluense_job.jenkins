@@ -1,4 +1,4 @@
-pipelineJob('Print your name') {
+pipelineJob('updateConfluense') {
   definition {
     cpsScm {
       scm {
