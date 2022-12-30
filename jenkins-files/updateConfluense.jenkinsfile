@@ -13,7 +13,7 @@ pipeline {
          
                 script{
                     if ("${params.VALUE}" == '0') {
-                        updateConfluensePage ENVIRONMENT : "prod", STATUS: "UP", SOURCE_BRANCH : "develop", IMAGE_TAG : "abc-xyz", CONFIG_BRANCH : "develop-config", CRED_USERNAME : "mangeshbangale27@gmail.com", CRED_PASSWORD : "fH6mRSjvBUK0C26WdrxKE0F9"
+                        updateConfluensePage ENVIRONMET : "prod", STATUS: "UP", SOURCE_BRANCH : "develop", IMAGE_TAG : "abc-xyz", CONFIG_BRANCH : "develop-config", CRED_USERNAME : "mangeshbangale27@gmail.com", CRED_PASSWORD : "fH6mRSjvBUK0C26WdrxKE0F9"
                     }
                     else {
                         echo " 1 value provided exiting script..."
