@@ -1,4 +1,4 @@
-pipelineJob('Print Hello message') {
+pipelineJob('Print your name') {
   definition {
     cpsScm {
       scm {
@@ -9,7 +9,8 @@ pipelineJob('Print Hello message') {
           branch('main')
         }
       }
-      scriptPath('jenkins-files/print_hello.jenkinsfile')
+      scriptPath('jenkins-files/updateConfluense.jenkinsfile')
     }
   }
+ 
 }
