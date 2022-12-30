@@ -1,15 +1,15 @@
-pipelineJob('job-dsl-plugin') {
+pipelineJob('Print Name') {
   definition {
     cpsScm {
       scm {
         git {
           remote {
-            url('https://github.com/mangeshbangale27/jenkinsfile.git')
+            url('https://github.com/mangeshbangale27/job-dsl-and-jenkinsfile.git')
           }
           branch('main')
         }
       }
-      scriptPath('print_name.jenkinsfile')
+      scriptPath('jenkins-files/print_name.jenkinsfile')
     }
   }
   parameters{
