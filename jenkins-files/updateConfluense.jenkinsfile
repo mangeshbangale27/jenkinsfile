@@ -6,8 +6,6 @@ pipeline {
     stages {
         stage(' Update confluence') {
             steps {
-                echo 'Hello World'
-         
                 script{
                         echo "invoking shared library..."
                         updateConfluensePage ENVIRONMET : "prod", STATUS: "UP", SOURCE_BRANCH : "develop", IMAGE_TAG : "abc-xyz", CRED_USERNAME : "mangeshbangale27@gmail.com", CRED_PASSWORD : "fH6mRSjvBUK0C26WdrxKE0F9"
@@ -15,7 +13,6 @@ pipeline {
                     }
                 }
                 
-            }
         }
     }
 }
