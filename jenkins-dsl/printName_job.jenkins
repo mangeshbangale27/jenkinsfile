@@ -1,4 +1,4 @@
-pipelineJob('Print Name') {
+pipelineJob('Print your name') {
   definition {
     cpsScm {
       scm {
@@ -12,7 +12,5 @@ pipelineJob('Print Name') {
       scriptPath('jenkins-files/print_name.jenkinsfile')
     }
   }
-  parameters{
-    choiceParam('VALUE', ['0','1'], 'Choose a number')
-  }
+ 
 }

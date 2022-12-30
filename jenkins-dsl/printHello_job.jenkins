@@ -1,4 +1,4 @@
-pipelineJob('Print Hello') {
+pipelineJob('Print Hello message') {
   definition {
     cpsScm {
       scm {
