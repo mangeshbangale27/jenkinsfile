@@ -1,0 +1,15 @@
+pipelineJob('test/test job') {
+  definition {
+    cpsScm {
+      scm {
+        git {
+          remote {
+            url('https://github.com/mangeshbangale27/job-dsl-and-jenkinsfile.git')
+          }
+          branch('main')
+        }
+      }
+      scriptPath('jenkins-files/print_hello.jenkinsfile')
+    }
+  }
+}
