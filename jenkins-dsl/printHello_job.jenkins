@@ -6,7 +6,7 @@ pipelineJob('Print Hello message') {
           remote {
             url('https://github.com/mangeshbangale27/job-dsl-and-jenkinsfile.git')
           }
-          branch('main')
+          branch('test')
         }
       }
       scriptPath('jenkins-files/print_hello.jenkinsfile')
