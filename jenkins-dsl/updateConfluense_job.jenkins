@@ -12,5 +12,7 @@ pipelineJob('updateConfluense') {
       scriptPath('jenkins-files/updateConfluense.jenkinsfile')
     }
   }
- 
+ environmentVariables{
+    env('BRANCH_NAME', 'main')
+ }
 }
