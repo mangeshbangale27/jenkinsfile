@@ -3,12 +3,15 @@
 
 pipeline {
     agent any
+    environment {
+        BRANCH_NAME = env.BRANCH_NAME
+    }
     stages {
         stage(' Update confluence') {
             steps {
                 script{
                         echo "invoking shared library..."
-                        updateConfluensePage ENVIRONMET : "prod", STATUS: "UP", SOURCE_BRANCH : "develop", IMAGE_TAG : "abc-xyz", CRED_USERNAME : "mangeshbangale27@gmail.com", CRED_PASSWORD : "fH6mRSjvBUK0C26WdrxKE0F9"
+                    updateConfluensePage ENVIRONMET : "prod", STATUS: "UP", SOURCE_BRANCH : "${BRANCH_NAME}", IMAGE_TAG : "abc-xyz"
                         echo " shared library executed..."
                     }
                 }
