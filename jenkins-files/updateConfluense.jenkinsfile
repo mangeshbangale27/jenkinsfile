@@ -8,8 +8,8 @@ pipeline {
             steps {
                 script{
                         echo "invoking shared library..."
-                    updateConfluensePage ENVIRONMET : "prod", STATUS: "UP", SOURCE_BRANCH : "XYZ", IMAGE_TAG : "abc-xyz"
-                   // testconfluence
+                   // updateConfluensePage ENVIRONMET : "prod", STATUS: "UP", SOURCE_BRANCH : "XYZ", IMAGE_TAG : "abc-xyz"
+                    testconfluence
                         echo " shared library executed..."
                     }
                 }
