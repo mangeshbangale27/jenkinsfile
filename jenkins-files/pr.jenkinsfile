@@ -6,7 +6,7 @@ pipeline {
                 echo 'Hello World'
          
                 script{
-                   git status
+                   
                }
             }
         }
