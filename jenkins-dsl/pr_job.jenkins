@@ -1,0 +1,15 @@
+pipelineJob('Create_PR') {
+  definition {
+    cpsScm {
+      scm {
+        git {
+          remote {
+            url('https://github.com/mangeshbangale27/job-dsl-and-jenkinsfile.git')
+          }
+          branch('main')
+        }
+      }
+      scriptPath('jenkins-files/pr.jenkinsfile')
+    }
+  }
+}
