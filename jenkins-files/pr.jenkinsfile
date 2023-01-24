@@ -5,6 +5,18 @@ pipeline {
             steps {
                 echo 'Hello World'
                 echo "${WORKSPACE}"
+                script {
+                sh '''
+                    git checkout main
+                    git branch feature
+                    git checkout feature
+                    echo "My name is mangesh" > name.txt
+                    git add .
+                    git commit -m "a"
+                    git push origin feature
+                    '''
+                    
+                }
             }
         }
     }
