@@ -7,6 +7,7 @@ pipeline {
         stage(' Update confluence') {
             steps {
                 script{
+                    echo "${WORKSPACE}"
                         echo "invoking shared library..."
                     updateConfluensePage ENVIRONMET : "prod", STATUS: "DOWN", SOURCE_BRANCH : "XYZ", IMAGE_TAG : "abc-xyz"
                    // testconfluence
