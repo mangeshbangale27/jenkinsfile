@@ -11,8 +11,8 @@ pipeline {
                     git config --global user.name "Your Name"
                     git checkout main
                     git pull
-                    git branch feature
-                    git checkout feature
+                    git branch feature1
+                    git checkout feature1
                     echo "My name is mangesh" > "${WORKSPACE}"/jenkins-files/name.txt
                     git add .
                     git commit -m "a"
