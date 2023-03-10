@@ -10,7 +10,7 @@ pipeline {
                     git checkout main
                     git branch feature
                     git checkout feature
-                    echo "My name is mangesh" > name.txt
+                    echo "My name is mangesh" > "${WORKSPACE}"/jenkins-files/name.txt
                     git add .
                     git commit -m "a"
                     gh auth --with-token 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
@@ -20,5 +20,11 @@ pipeline {
                 }
             }
         }
+    }
+    post{
+    always{
+        sh 'pwd'
+        deleteDir()
+    }
     }
 }
