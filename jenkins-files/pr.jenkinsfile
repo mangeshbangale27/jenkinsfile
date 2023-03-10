@@ -13,11 +13,12 @@ pipeline {
                     git pull
                     git branch feature1
                     git checkout feature1
-                    echo "My name is mangesh bangale" > "${WORKSPACE}"/jenkins-files/name.txt
+                    echo "My name is mangesh Bangale" > "${WORKSPACE}"/jenkins-files/name.txt
                     git add .
                     git commit -m "a"
-                    //gh auth --with-token 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
                     git push origin feature
+                    //gh auth --with-token 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
+                    
                     '''
                     
                 }
