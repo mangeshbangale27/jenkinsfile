@@ -8,6 +8,7 @@ pipeline {
                 script {
                 sh '''
                     git checkout main
+                    git pull
                     git branch feature
                     git checkout feature
                     echo "My name is mangesh" > "${WORKSPACE}"/jenkins-files/name.txt
@@ -24,7 +25,7 @@ pipeline {
     post{
     always{
         sh 'pwd'
-        deleteDir()
+        #deleteDir()
     }
     }
 }
