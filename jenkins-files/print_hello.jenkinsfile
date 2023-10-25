@@ -3,11 +3,14 @@
 
 pipeline {
     agent any
+    environment {
+        branch = ${scm.branches[0].name}
+    }
     stages {
         stage('Hello') {
             steps {
                 echo 'Hello World'     
-                echo "${scm.branches[0].name}"
+                echo "$branch"
                 
                 script {
                 def branch = env.BRANCH_NAME    
